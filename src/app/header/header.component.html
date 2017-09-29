@@ -1,0 +1,13 @@
+<header>
+  <div class="container align-items-center">
+    <ng-template class="col-md-4" #rt let-r="result" let-t="term">
+      <span>{{r.full_name}}</span>
+    </ng-template>
+    <div class="form-group">
+      <input id="typeahead-http" type="text" class="form-input" [class.is-invalid]="searchFailed" [inputFormatter]="formatMatches" [(ngModel)]="model" [resultTemplate]="rt"  [ngbTypeahead]="search" placeholder="GitHub repository search"  (selectItem)="onSelectTypeahead($event.item)" />
+      <div class="not-found" *ngIf="searchFailed">Sorry, suggestions could not be loaded.</div>
+    </div>
+  </div>
+  <span *ngIf="searching" class="loader"></span>
+</header>
+

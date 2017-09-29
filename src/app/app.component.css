@@ -1,0 +1,12 @@
+.search-hint {
+  margin-top: 100px;
+}
+.search-hint img {
+  display: block;
+  margin: 0 auto;
+}
+
+.search-hint h1 {
+  color: white;
+  text-align: center;
+}
